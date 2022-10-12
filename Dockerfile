@@ -1,8 +1,8 @@
-FROM openkbs/jdk11-mvn-py3
+FROM tomcat:8-jre8
 
 EXPOSE 8080
 
-ADD target/POV-maven-first.jar POV-maven-first.jar
+COPY ./POV-maven-first.jar /usr/local/tomcat/webapps
 
-ENTRYPOINT ["java","-jar","POV-maven-first.jar"]
+
 
